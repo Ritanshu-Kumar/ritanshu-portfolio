@@ -1,341 +1,1774 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0d0a">
-  <meta name="description" content="Kalvakuntla Ritanshu Kumar — Data Science student focused on Machine Learning, Deep Learning, analytics and applied AI.">
-  <meta property="og:title" content="Ritanshu Kumar — Data Science × Machine Learning">
-  <meta property="og:description" content="Portfolio of applied data science, machine learning, deep learning and AI projects.">
-  <meta property="og:type" content="website">
+
+  <meta
+    name="theme-color"
+    content="#0b0d0a"
+  >
+
+  <meta
+    name="description"
+    content="Kalvakuntla Ritanshu Kumar — Data Science student focused on Machine Learning, Deep Learning, analytics and applied AI."
+  >
+
+  <meta
+    property="og:title"
+    content="Ritanshu Kumar — Data Science × Machine Learning"
+  >
+
+  <meta
+    property="og:description"
+    content="Portfolio of applied data science, machine learning, deep learning and AI projects."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
   <title>Ritanshu Kumar — Data Science × Machine Learning</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%2064%2064&quot;%3E%3Crect%20width=&quot;64&quot;%20height=&quot;64&quot;%20rx=&quot;14&quot;%20fill=&quot;%230b0d0a&quot;/%3E%3Cpath%20d=&quot;M18%2046V18h13c8%200%2013%204%2013%2010s-5%2010-13%2010h-6&quot;%20fill=&quot;none&quot;%20stroke=&quot;%23c8ff4a&quot;%20stroke-width=&quot;4&quot;%20stroke-linecap=&quot;round&quot;%20stroke-linejoin=&quot;round&quot;/%3E%3Cpath%20d=&quot;M38%2018l9%209-9%209&quot;%20fill=&quot;none&quot;%20stroke=&quot;%23e8eadf&quot;%20stroke-width=&quot;3&quot;%20stroke-linecap=&quot;round&quot;%20stroke-linejoin=&quot;round&quot;/%3E%3C/svg%3E"
+  >
 </head>
+
 <body>
+
   <div class="noise"></div>
   <div class="grid-overlay"></div>
+
   <div class="cursor cursor-dot"></div>
   <div class="cursor cursor-ring"></div>
   <div class="cursor-label">VIEW</div>
-  <div class="scroll-progress"><span></span></div>
+
+  <div class="scroll-progress">
+    <span></span>
+  </div>
+
+
+  <!-- LOADER -->
 
   <div class="loader" id="loader" aria-hidden="true">
+
     <div class="loader-inner">
-      <div class="loader-top"><span>R/ / 2026</span><span>PORTFOLIO</span></div>
-      <div class="loader-name">RITANSHU<br><em>KUMAR</em></div>
-      <div class="loader-track"><span></span></div>
-      <div class="loader-bottom"><span>DATA SCIENCE</span><span id="loaderPercent">0%</span></div>
+
+      <div class="loader-top">
+        <span>R/ / 2026</span>
+        <span>PORTFOLIO</span>
+      </div>
+
+      <div class="loader-name">
+        RITANSHU<br>
+        <em>KUMAR</em>
+      </div>
+
+      <div class="loader-track">
+        <span></span>
+      </div>
+
+      <div class="loader-bottom">
+        <span>DATA SCIENCE</span>
+        <span id="loaderPercent">0%</span>
+      </div>
+
     </div>
+
   </div>
+
+
+  <!-- HEADER -->
 
   <header class="site-header" id="siteHeader">
-    <a class="brand" href="#top" aria-label="Ritanshu Kumar home"><span class="brand-mark"><b>R</b><i>/</i></span><span class="brand-word">RITANSHU</span></a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#experience">Experience</a>
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#credentials">Credentials</a>
-      <a href="#contact">Contact</a>
-      <a href="#resume">Resume</a>
+
+    <a
+      class="brand"
+      href="#top"
+      aria-label="Ritanshu Kumar home"
+    >
+      <span class="brand-mark">
+        <b>R</b><i>/</i>
+      </span>
+
+      <span class="brand-word">
+        RITANSHU
+      </span>
+    </a>
+
+
+    <nav
+      class="desktop-nav"
+      aria-label="Primary navigation"
+    >
+
+      <a href="#experience">
+        Experience
+      </a>
+
+      <a href="#work">
+        Work
+      </a>
+
+      <a href="#opensource">
+        Open Source
+      </a>
+
+      <a href="#skills">
+        Skills
+      </a>
+
+      <a href="#credentials">
+        Credentials
+      </a>
+
+      <a href="#resume">
+        Resume
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
     </nav>
-    <a class="header-cta magnetic" href="#contact">Let's talk <span>↗</span></a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+
+
+    <a
+      class="header-cta magnetic"
+      href="#contact"
+    >
+      Let's talk <span>↗</span>
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <i></i>
+      <i></i>
+    </button>
+
   </header>
 
+
+  <!-- MOBILE MENU -->
+
   <div class="mobile-menu" id="mobileMenu">
+
     <nav>
-      <a href="#experience">Experience <span>01</span></a>
-      <a href="#work">Work <span>02</span></a>
-      <a href="#skills">Skills <span>03</span></a>
-      <a href="#credentials">Credentials <span>04</span></a>
-      <a href="#contact">Contact <span>05</span></a>
-      <a href="#resume">Resume <span>06</span></a>
+
+      <a href="#experience">
+        Experience <span>01</span>
+      </a>
+
+      <a href="#work">
+        Work <span>02</span>
+      </a>
+
+      <a href="#opensource">
+        Open Source <span>03</span>
+      </a>
+
+      <a href="#skills">
+        Skills <span>04</span>
+      </a>
+
+      <a href="#credentials">
+        Credentials <span>05</span>
+      </a>
+
+      <a href="#resume">
+        Resume <span>06</span>
+      </a>
+
+      <a href="#contact">
+        Contact <span>07</span>
+      </a>
+
     </nav>
+
   </div>
 
+
   <main id="top">
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <section class="hero section-pad">
+
       <div class="hero-grid">
+
         <div class="hero-copy">
-          <div class="eyebrow reveal">DATA SCIENCE <span>×</span> MACHINE LEARNING</div>
-          <h1 class="hero-title reveal delay-1"><span>Building</span><br><em>intelligent</em><br><span>things.</span></h1>
-          <p class="hero-sub reveal delay-2">I'm <strong>Ritanshu Kumar</strong>, an Integrated M.Tech Computer Science student at VIT Vellore, specializing in Data Science. I turn data, models and ideas into practical systems across machine learning, deep learning, analytics and applied AI.</p>
+
+          <div class="eyebrow reveal">
+            DATA SCIENCE
+            <span>×</span>
+            MACHINE LEARNING
+          </div>
+
+
+          <h1 class="hero-title reveal delay-1">
+
+            <span>Building</span><br>
+
+            <em>intelligent</em><br>
+
+            <span>things.</span>
+
+          </h1>
+
+
+          <p class="hero-sub reveal delay-2">
+
+            I'm
+            <strong>Ritanshu Kumar</strong>,
+            an Integrated M.Tech Computer Science student at VIT Vellore,
+            specializing in Data Science. I turn data, models and ideas into
+            practical systems across machine learning, deep learning,
+            analytics and applied AI.
+
+          </p>
+
+
           <div class="hero-actions reveal delay-3">
-            <a class="button button-light magnetic" href="#work">Explore my work <span>↘</span></a>
-            <a class="text-link magnetic" href="#contact">Get in touch <span>↗</span></a>
+
+            <a
+              class="button button-light magnetic"
+              href="#work"
+            >
+              Explore my work
+              <span>↘</span>
+            </a>
+
+
+            <a
+              class="text-link magnetic"
+              href="#contact"
+            >
+              Get in touch
+              <span>↗</span>
+            </a>
+
           </div>
+
+
           <div class="hero-meta reveal delay-4">
-            <span>VIT Vellore</span><b></b><span>Data Science</span><b></b><span>Open to opportunities</span>
+
+            <span>VIT Vellore</span>
+
+            <b></b>
+
+            <span>Data Science</span>
+
+            <b></b>
+
+            <span>Open to opportunities</span>
+
           </div>
+
         </div>
+
 
         <div class="hero-visual reveal delay-2">
-          <div class="visual-frame interactive-card" data-cursor="VIEW">
+
+          <div
+            class="visual-frame interactive-card"
+            data-cursor="VIEW"
+          >
+
+            <img
+              class="profile-photo"
+              src="assets/profile.jpg"
+              alt="Ritanshu Kumar"
+            >
+
             <div class="photo-glow"></div>
-            <img src="assets/profile.png" alt="Ritanshu Kumar" class="profile-photo">
-            <div class="visual-label top"><span>01 / 01</span><strong>DATA → MODEL → IMPACT</strong></div>
-            <div class="visual-label bottom"><span>HYDERABAD / INDIA</span><strong>OPEN TO WORK</strong></div>
-            <div class="frame-corner corner-a"></div><div class="frame-corner corner-b"></div>
+
+            <div class="visual-caption">
+
+              <span>
+                HYDERABAD / INDIA
+              </span>
+
+              <span>
+                OPEN TO WORK
+              </span>
+
+            </div>
+
           </div>
+
         </div>
+
       </div>
-      <div class="scroll-cue"><span>Scroll to explore</span><i></i></div>
-      <div class="hero-side-note">SCROLL / SCROLL / SCROLL /</div>
+
+
+      <div class="scroll-cue">
+
+        <span>
+          Scroll to explore
+        </span>
+
+        <i></i>
+
+      </div>
+
+
+      <div class="hero-side-note">
+        SCROLL / SCROLL / SCROLL /
+      </div>
+
     </section>
 
-    <section class="statement section-pad" id="about">
-      <div class="section-kicker reveal">00 / PROFILE</div>
+
+    <!-- =========================
+         PROFILE
+    ========================== -->
+
+    <section
+      class="statement section-pad"
+      id="about"
+    >
+
+      <div class="section-kicker reveal">
+        00 / PROFILE
+      </div>
+
+
       <div class="statement-grid">
-        <h2 class="display reveal">A data science student with a bias toward <em>building.</em></h2>
+
+        <h2 class="display reveal">
+          A data science student with a bias toward
+          <em>building.</em>
+        </h2>
+
+
         <div class="statement-copy reveal delay-1">
-          <p>I enjoy taking messy data and open-ended problems and turning them into systems that can be tested, measured and improved.</p>
-          <p>My core direction is <strong>Data Science + Machine Learning</strong>, with hands-on work across computer vision, NLP, RAG, remote sensing and analytics.</p>
+
+          <p>
+            I enjoy taking messy data and open-ended problems and turning
+            them into systems that can be tested, measured and improved.
+          </p>
+
+          <p>
+            My core direction is
+            <strong>Data Science + Machine Learning</strong>,
+            with hands-on work across computer vision, NLP, RAG,
+            remote sensing and analytics.
+          </p>
+
+
           <div class="mini-facts">
-            <div><span>01</span><strong>Analyze</strong><small>EDA · statistics · feature selection</small></div>
-            <div><span>02</span><strong>Model</strong><small>ML · DL · computer vision · NLP</small></div>
-            <div><span>03</span><strong>Build</strong><small>RAG · APIs · dashboards · prototypes</small></div>
+
+            <div>
+              <span>01</span>
+              <strong>Analyze</strong>
+              <small>
+                EDA · statistics · feature selection
+              </small>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>Model</strong>
+              <small>
+                ML · DL · computer vision · NLP
+              </small>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>Build</strong>
+              <small>
+                RAG · APIs · dashboards · prototypes
+              </small>
+            </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="experience section-pad" id="experience">
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section
+      class="experience section-pad"
+      id="experience"
+    >
+
       <div class="section-head reveal">
-        <div><span class="section-kicker">01 / EXPERIENCE</span><h2 class="display small">Internships that put the <em>skills</em> to work.</h2></div>
-        <p>Hands-on experience matters. These are the roles where I applied what I learned and worked through real development workflows.</p>
+
+        <div>
+
+          <span class="section-kicker">
+            01 / EXPERIENCE
+          </span>
+
+          <h2 class="display small">
+            Internships that put the
+            <em>skills</em> to work.
+          </h2>
+
+        </div>
+
+
+        <p>
+          Hands-on experience applying machine learning concepts through
+          implementation, experimentation and evaluation.
+        </p>
+
       </div>
+
 
       <div class="experience-list">
-        <article class="experience-card featured-experience reveal interactive-card" data-cursor="OPEN">
-          <div class="experience-number">01</div>
+
+
+        <!-- MANMUN -->
+
+        <article
+          class="experience-card featured-experience reveal interactive-card"
+          data-cursor="OPEN"
+        >
+
+          <div class="experience-number">
+            01
+          </div>
+
+
           <div class="experience-main">
-            <div class="experience-top"><span>JUN — JUL 2025</span><span>HYDERABAD</span></div>
-            <div class="company-lockup"><span class="company-dot"></span><div><strong>MANMUN PVT LTD</strong><small>Machine Learning Intern</small></div></div>
-            <h3>Built an applied AI project from <em>retrieval to answer.</em></h3>
-            <p>Worked on AI/ML application workflows involving implementation, testing and evaluation. The key internship project was a Document Q&amp;A RAG Assistant for answering questions from a defined document knowledge base.</p>
-            <div class="experience-tags"><span>Machine Learning</span><span>RAG</span><span>NLP</span><span>Python</span></div>
+
+            <div class="experience-top">
+              <span>JUN — JUL 2025</span>
+              <span>HYDERABAD</span>
+            </div>
+
+
+            <div class="company-lockup">
+
+              <span class="company-dot"></span>
+
+              <div>
+
+                <strong>
+                  MANMUN PVT LTD
+                </strong>
+
+                <small>
+                  Machine Learning Intern
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <h3>
+              Applied machine learning in a
+              <em>practical development workflow.</em>
+            </h3>
+
+
+            <p>
+              Worked on AI-driven application development with practical
+              exposure to implementing, testing and evaluating machine
+              learning and deep learning models. Developed and evaluated
+              multiple machine learning models while gaining hands-on
+              experience across the end-to-end model development workflow.
+            </p>
+
+
+            <div class="experience-tags">
+
+              <span>
+                Machine Learning
+              </span>
+
+              <span>
+                Deep Learning
+              </span>
+
+              <span>
+                Python
+              </span>
+
+              <span>
+                Model Evaluation
+              </span>
+
+            </div>
+
           </div>
+
+
           <div class="experience-proof">
-            <div class="proof-frame"><img src="assets/manmun_completion.png" alt="MANMUN internship certificate"></div>
-            <span>INTERNSHIP PROOF <b>↗</b></span>
-          </div>
+
+            <div
+              class="proof-frame certificate-trigger"
+              data-cert="assets/manmun_completion.jpg"
+              role="button"
+              tabindex="0"
+              aria-label="View MANMUN internship certificate"
+            >
+              <img
+                src="assets/manmun_completion.jpg"
+                alt="MANMUN PVT LTD Machine Learning Internship Certificate"
+              >
+              </div>
+
+              <span>
+                INTERNSHIP CERTIFICATE
+                <b>↗ VIEW</b>
+              </span>
+
+            </div>
+
         </article>
 
-        <article class="experience-card reveal interactive-card" data-cursor="OPEN">
-          <div class="experience-number">02</div>
-          <div class="experience-main">
-            <div class="experience-top"><span>2024</span><span>TRAINING / INTERNSHIP</span></div>
-            <div class="company-lockup"><span class="company-dot"></span><div><strong>EMBRIZON TECHNOLOGIES</strong><small>Machine Learning with Python</small></div></div>
-            <h3>Strengthened my foundation in <em>machine learning with Python.</em></h3>
-            <p>Hands-on exposure to Python-based machine learning workflows, model building and practical problem solving.</p>
-            <div class="experience-tags"><span>Python</span><span>Machine Learning</span><span>Model Building</span></div>
+
+        <!-- EMBRIZON -->
+
+        <article
+          class="experience-card reveal interactive-card"
+          data-cursor="VIEW"
+        >
+
+          <div class="experience-number">
+            02
           </div>
-          <div class="experience-mark"><span>ML</span><small>PYTHON<br>TRAINING</small></div>
+
+
+          <div class="experience-main">
+
+            <div class="experience-top">
+              <span>2024</span>
+              <span>TRAINING / INTERNSHIP</span>
+            </div>
+
+
+            <div class="company-lockup">
+
+              <span class="company-dot"></span>
+
+              <div>
+
+                <strong>
+                  EMBRIZON TECHNOLOGIES
+                </strong>
+
+                <small>
+                  Machine Learning with Python
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <h3>
+              Strengthened my foundation in
+              <em>machine learning with Python.</em>
+            </h3>
+
+
+            <p>
+              Hands-on exposure to Python-based machine learning workflows,
+              model building and practical problem solving.
+            </p>
+
+
+            <div class="experience-tags">
+
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Model Building</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="experience-mark">
+
+            <span>
+              ML
+            </span>
+
+            <small>
+              PYTHON<br>
+              TRAINING
+            </small>
+
+          </div>
+
         </article>
+
       </div>
+
     </section>
 
-    <section class="work section-pad" id="work">
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section
+      class="work section-pad"
+      id="work"
+    >
+
       <div class="section-head reveal">
-        <div><span class="section-kicker">02 / SELECTED WORK</span><h2 class="display small">Projects that show how I <em>think.</em></h2></div>
-        <p>Selected academic, internship and personal work — focused on useful problems rather than a long list of technologies.</p>
+
+        <div>
+
+          <span class="section-kicker">
+            02 / SELECTED WORK
+          </span>
+
+          <h2 class="display small">
+            Projects that show how I
+            <em>think.</em>
+          </h2>
+
+        </div>
+
+
+        <p>
+          Selected product, academic and machine learning work focused on
+          building practical systems and measurable results.
+        </p>
+
       </div>
+
 
       <div class="project-stack">
-        <article class="project project-featured reveal interactive-card" data-cursor="OPEN">
-          <div class="project-index">01</div>
-          <div class="project-main">
-            <div class="project-topline"><span>MANMUN INTERNSHIP</span><span>RAG / NLP</span></div>
-            <h3>Document Q&amp;A<br><em>RAG Assistant</em></h3>
-            <p>A retrieval-augmented document assistant combining document retrieval, vector search and an LLM response layer to answer questions from a defined knowledge base.</p>
-            <div class="tag-row"><span>Python</span><span>ChromaDB</span><span>Llama 3.1</span><span>Groq API</span><span>SQLite</span><span>Streamlit</span></div>
-            <a class="project-link magnetic" href="https://github.com/Ritanshu-Kumar/rag-document-assistant" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
+
+
+        <!-- FORMWISE -->
+
+        <article
+          class="project project-featured reveal interactive-card"
+          data-cursor="OPEN"
+        >
+
+          <div class="project-index">
+            01
           </div>
-          <div class="project-visual rag-visual"><div class="terminal-card"><div class="terminal-head"><span></span><span></span><span></span><label>rag_assistant.py</label></div><div class="terminal-body"><p><i>query</i> → “What does this document say?”</p><p><i>retrieve</i> → <b>4 relevant chunks</b></p><p><i>generate</i> → grounded answer</p><div class="terminal-line"></div><strong>retrieval → context → answer</strong></div></div></div>
+
+
+          <div class="project-main">
+
+            <div class="project-topline">
+              <span>INDEPENDENT PRODUCT</span>
+              <span>AI / FULL STACK</span>
+            </div>
+
+
+            <h3>
+              FormWise<br>
+              <em>AI</em>
+            </h3>
+
+
+            <p>
+              Built an AI-powered form builder and feedback analytics
+              platform that transforms collected responses into summaries,
+              sentiment, themes and actionable insights using Google Gemini.
+            </p>
+
+
+            <div class="tag-row">
+
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>FastAPI</span>
+              <span>PostgreSQL</span>
+              <span>Gemini</span>
+              <span>Vercel</span>
+
+            </div>
+
+
+            <a
+              class="project-link magnetic"
+              href="https://github.com/Ritanshu-Kumar/formwise-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+              <span>↗</span>
+            </a>
+
+
+            <a
+              class="project-link magnetic"
+              href="https://formwise-ai-seven.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live demo
+              <span>↗</span>
+            </a>
+
+          </div>
+
+
+          <div class="project-visual formwise-visual">
+
+            <div class="formwise-window">
+
+              <div class="formwise-top">
+                <span></span>
+                <span></span>
+                <span></span>
+                <label>
+                  FORMWISE / AI INSIGHTS
+                </label>
+              </div>
+
+              <img
+                src="assets/formwise_ai_insights.jpg"
+                alt="FormWise AI response insights dashboard powered by Gemini"
+              >
+
+            </div>
+
+          </div>
+
         </article>
 
-        <article class="project reveal interactive-card" data-cursor="VIEW">
-          <div class="project-index">02</div>
-          <div class="project-main">
-            <div class="project-topline"><span>ONGOING</span><span>REMOTE SENSING / DEEP LEARNING</span></div>
-            <h3>Multi-Temporal Water Body Analysis of Hyderabad's Urban Lakes</h3>
-            <p>Analyzing changes in Hyderabad's urban water bodies using multi-temporal Sentinel-2 imagery and deep learning, with a focus on meaningful spatial and temporal patterns.</p>
-            <div class="tag-row"><span>Python</span><span>Sentinel-2</span><span>Deep Learning</span><span>Remote Sensing</span><span>Data Analysis</span></div>
+
+        <!-- RAG -->
+
+        <article
+          class="project reveal interactive-card"
+          data-cursor="VIEW"
+        >
+
+          <div class="project-index">
+            02
           </div>
-          <div class="project-visual satellite-visual"><div class="sat-grid"></div><div class="sat-label">SENTINEL-2<br><strong>MULTI-TEMPORAL</strong></div><div class="scan-line"></div></div>
+
+
+          <div class="project-main">
+
+            <div class="project-topline">
+              <span>RAG / NLP</span>
+              <span>AI APPLICATION</span>
+            </div>
+
+
+            <h3>
+              Document Q&amp;A<br>
+              <em>RAG Assistant</em>
+            </h3>
+
+
+            <p>
+              Built a retrieval-augmented document QA system using ChromaDB
+              vector search and Llama 3.1 via Groq API for grounded responses.
+            </p>
+
+
+            <div class="tag-row">
+
+              <span>Python</span>
+              <span>ChromaDB</span>
+              <span>Llama 3.1</span>
+              <span>Groq API</span>
+              <span>SQLite</span>
+              <span>Streamlit</span>
+
+            </div>
+
+
+            <a
+              class="project-link magnetic"
+              href="https://github.com/Ritanshu-Kumar/rag-document-assistant"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View project
+              <span>↗</span>
+            </a>
+
+          </div>
+
+
+          <div class="project-visual rag-visual">
+
+            <div class="terminal-card">
+
+              <div class="terminal-head">
+                <span></span>
+                <span></span>
+                <span></span>
+                <label>
+                  rag_assistant.py
+                </label>
+              </div>
+
+
+              <div class="terminal-body">
+
+                <p>
+                  <i>query</i>
+                  →
+                  “What does this document say?”
+                </p>
+
+                <p>
+                  <i>retrieve</i>
+                  →
+                  <b>relevant chunks</b>
+                </p>
+
+                <p>
+                  <i>generate</i>
+                  →
+                  grounded answer
+                </p>
+
+                <div class="terminal-line"></div>
+
+                <strong>
+                  retrieval → context → answer
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </article>
 
-        <article class="project reveal interactive-card" data-cursor="VIEW">
-          <div class="project-index">03</div>
-          <div class="project-main">
-            <div class="project-topline"><span>DEEP LEARNING</span><span>COMPUTER VISION</span></div>
-            <h3>CAPTCHA Recognition<br><em>with CRNN + CTC</em></h3>
-            <p>An end-to-end sequence recognition pipeline using convolutional feature extraction, recurrent sequence modeling and CTC decoding — avoiding explicit character segmentation.</p>
-            <div class="tag-row"><span>PyTorch</span><span>ResNet18</span><span>CRNN</span><span>CTC Loss</span><span>PIL</span></div>
+
+        <!-- HYBRIDXRayNet -->
+
+        <article
+          class="project project-medical reveal interactive-card"
+          data-cursor="VIEW"
+        >
+
+          <div class="project-index">
+            03
           </div>
-          <div class="project-visual captcha-visual"><div class="captcha-box"><span>7KpX3</span><small>SEQUENCE MODEL</small></div></div>
+
+
+          <div class="project-main">
+
+            <div class="project-topline">
+              <span>MEDICAL AI</span>
+              <span>CNN + TRANSFORMER</span>
+            </div>
+
+
+            <h3>
+              HybridXRayNet<br>
+              <em>Pneumonia Detection</em>
+            </h3>
+
+
+            <p>
+              Built a hybrid CNN-Transformer model for chest X-ray pneumonia
+              classification using multi-scale CNN feature extraction,
+              residual attention, Transformer Encoder, adaptive feature
+              fusion and Grad-CAM for interpretability.
+            </p>
+
+
+            <div class="result-strip">
+
+              <div>
+                <strong>83.17%</strong>
+                <span>accuracy</span>
+              </div>
+
+              <div>
+                <strong>98.97%</strong>
+                <span>recall</span>
+              </div>
+
+              <div>
+                <strong>96.67%</strong>
+                <span>ROC-AUC</span>
+              </div>
+
+            </div>
+
+
+            <div class="tag-row">
+
+              <span>PyTorch</span>
+              <span>CNN</span>
+              <span>Transformer</span>
+              <span>Attention</span>
+              <span>Grad-CAM</span>
+
+            </div>
+
+
+            <a
+              class="project-link magnetic"
+              href="https://github.com/Ritanshu-Kumar/HybridXRayNet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View project
+              <span>↗</span>
+            </a>
+
+          </div>
+
+
+          <div class="project-visual xray-visual">
+
+            <img
+              src="assets/hybridxraynet_demo.jpg"
+              alt="HybridXRayNet demo showing 99.98% confidence pneumonia classification with Grad-CAM heatmap"
+            >
+
+          </div>
+
         </article>
 
-        <article class="project reveal interactive-card" data-cursor="VIEW">
-          <div class="project-index">04</div>
-          <div class="project-main">
-            <div class="project-topline"><span>DEEP LEARNING</span><span>AGRICULTURAL COMPUTER VISION</span></div>
-            <h3>Rice Leaf Disease<br><em>Classification</em></h3>
-            <p>A customized MobileNetV3 Large framework enhanced with self-attention for multi-class rice leaf disease classification, using transfer learning, multi-scale features and fine-tuning.</p>
-            <div class="result-strip"><div><strong>99.8%</strong><span>validation accuracy</span></div><div><strong>99.81%</strong><span>validation F1</span></div><div><strong>96.35%</strong><span>OOD accuracy</span></div></div>
-            <div class="tag-row"><span>PyTorch</span><span>MobileNetV3</span><span>Self-Attention</span><span>Transfer Learning</span><span>Computer Vision</span></div>
+
+        <!-- CAPTCHA -->
+
+        <article
+          class="project reveal interactive-card"
+          data-cursor="VIEW"
+        >
+
+          <div class="project-index">
+            04
           </div>
-          <div class="project-visual rice-visual"><div class="rice-grid"></div><div class="leaf-shape"><i></i><i></i><i></i><i></i></div><div class="visual-stamp">10 CLASSES<br><strong>AGRI AI</strong></div></div>
+
+
+          <div class="project-main">
+
+            <div class="project-topline">
+              <span>DEEP LEARNING</span>
+              <span>COMPUTER VISION</span>
+            </div>
+
+
+            <h3>
+              CAPTCHA Recognition<br>
+              <em>with CRNN + CTC</em>
+            </h3>
+
+
+            <p>
+              Developed an end-to-end CAPTCHA recognition system combining
+              ResNet18 visual feature extraction, bidirectional GRU sequence
+              modeling and CTC decoding without explicit character segmentation.
+            </p>
+
+
+            <div class="result-strip">
+
+              <div>
+                <strong>99.30%</strong>
+                <span>exact string</span>
+              </div>
+
+              <div>
+                <strong>99.86%</strong>
+                <span>character accuracy</span>
+              </div>
+
+              <div>
+                <strong>9,955</strong>
+                <span>images</span>
+              </div>
+
+            </div>
+
+
+            <div class="tag-row">
+
+              <span>PyTorch</span>
+              <span>ResNet18</span>
+              <span>BiGRU</span>
+              <span>CTC Loss</span>
+              <span>OCR</span>
+
+            </div>
+
+
+            <a
+              class="project-link magnetic"
+              href="https://github.com/Ritanshu-Kumar/captcha-recognition-crnn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View project
+              <span>↗</span>
+            </a>
+
+          </div>
+
+
+          <div class="project-visual captcha-visual">
+
+            <img
+              src="assets/captcha_predictions.jpg"
+              alt="CRNN CAPTCHA recognition predictions vs ground truth, showing exact matches across sample images"
+            >
+
+          </div>
+
         </article>
 
-        <article class="project project-medical reveal interactive-card" data-cursor="VIEW">
-          <div class="project-index">05</div>
-          <div class="project-main">
-            <div class="project-topline"><span>MEDICAL AI</span><span>CNN + TRANSFORMER</span></div>
-            <h3>HybridXRayNet<br><em>Pneumonia Detection</em></h3>
-            <p>A hybrid CNN-Transformer model for chest X-ray classification, designed to improve sensitivity to pneumonia cases while retaining a strong balance between precision and recall.</p>
-            <div class="result-strip"><div><strong>92.6%</strong><span>recall</span></div><div><strong>87.2%</strong><span>F1-score</span></div><div><strong>83.0%</strong><span>accuracy</span></div></div>
-            <div class="tag-row"><span>PyTorch</span><span>CNN</span><span>Transformer</span><span>Grad-CAM</span><span>Computer Vision</span></div>
+
+        <!-- SATELLITE PROJECT -->
+
+        <article
+          class="project reveal interactive-card"
+          data-cursor="ONGOING"
+        >
+
+          <div class="project-index">
+            05
           </div>
-          <div class="project-visual xray-visual"><img src="assets/pneumonia-demo.png" alt="Pneumonia prediction and Grad-CAM demonstration"><div class="xray-overlay"><span>MODEL OUTPUT</span><strong>PNEUMONIA · 92.3%</strong><small>GRAD-CAM / INTERPRETABILITY</small></div></div>
+
+
+          <div class="project-main">
+
+            <div class="project-topline">
+              <span>ONGOING RESEARCH</span>
+              <span>REMOTE SENSING</span>
+            </div>
+
+
+            <h3>
+              Multi-Temporal Satellite<br>
+              <em>Water Body Change Detection</em>
+            </h3>
+
+
+            <p>
+              Developing a multi-temporal satellite imagery workflow for
+              water-body change detection using MNDWI-based extraction and
+              a manually created 2018 reference mask as ground truth for
+              evaluation.
+            </p>
+
+
+            <div class="tag-row">
+
+              <span>Python</span>
+              <span>Satellite Imagery</span>
+              <span>MNDWI</span>
+              <span>Remote Sensing</span>
+              <span>Change Detection</span>
+
+            </div>
+
+
+            <span class="project-link">
+              Ongoing research
+              <span>↗</span>
+            </span>
+
+          </div>
+
+
+          <div class="project-visual satellite-visual">
+
+            <img
+              src="assets/Hussain_sagar.jpg"
+              alt="Hussain Sagar lake satellite imagery — MNDWI water body change detection"
+            >
+
+            <div class="scan-line"></div>
+
+            <div class="sat-label">
+              <strong>HUSSAIN SAGAR</strong><br>
+              MNDWI water extraction sample
+            </div>
+
+          </div>
+
         </article>
 
-        <article class="project reveal interactive-card" data-cursor="VIEW">
-          <div class="project-index">06</div>
-          <div class="project-main">
-            <div class="project-topline"><span>WEB3</span><span>SOFTWARE PROJECT</span></div>
-            <h3>Cross-Country<br><em>Transaction System</em></h3>
-            <p>A decentralized application for cross-border payments using Ethereum smart contracts, with MetaMask wallet integration and a React interface.</p>
-            <div class="tag-row"><span>Solidity</span><span>Ethereum</span><span>Hardhat</span><span>MetaMask</span><span>React</span></div>
-          </div>
-          <div class="project-visual web3-visual"><div class="nodes"><span></span><span></span><span></span><span></span><i></i></div><small>DECENTRALIZED / TRANSPARENT</small></div>
-        </article>
       </div>
+
     </section>
 
-    <section class="skills section-pad" id="skills">
-      <div class="section-kicker reveal">03 / TOOLKIT</div>
-      <div class="skills-intro"><h2 class="display reveal">The stack behind<br><em>the work.</em></h2><p class="reveal delay-1">A focused technical toolkit for entry-level Data Science, Machine Learning and applied AI roles.</p></div>
-      <div class="skill-marquee" aria-hidden="true"><div>PYTHON · SQL · PANDAS · NUMPY · SCIKIT-LEARN · PYTORCH · TENSORFLOW · DATA VISUALIZATION · MACHINE LEARNING · DEEP LEARNING · RAG · LLMs · COMPUTER VISION · NLP · GIT · LINUX · POWER BI · DOCKER · PYTHON · SQL · PANDAS · NUMPY ·</div></div>
+
+    <!-- =========================
+         OPEN SOURCE
+    ========================== -->
+
+    <section
+      class="opensource section-pad"
+      id="opensource"
+    >
+
+      <div class="section-head reveal">
+
+        <div>
+
+          <span class="section-kicker">
+            03 / OPEN SOURCE
+          </span>
+
+          <h2 class="display small">
+            Contributing beyond my
+            <em>own work.</em>
+          </h2>
+
+        </div>
+
+
+        <p>
+          Focused contributions to existing projects through implementation,
+          debugging and code review.
+        </p>
+
+      </div>
+
+
+      <div class="experience-list">
+
+        <article
+          class="experience-card featured-experience reveal interactive-card"
+          data-cursor="OPEN"
+        >
+
+          <div class="experience-number">
+            01
+          </div>
+
+
+          <div class="experience-main">
+
+            <div class="experience-top">
+              <span>OPEN SOURCE CONTRIBUTION</span>
+              <span>MERGED PR</span>
+            </div>
+
+
+            <div class="company-lockup">
+
+              <span class="company-dot"></span>
+
+              <div>
+
+                <strong>
+                  EXPENSE TRACKER
+                </strong>
+
+                <small>
+                  Frontend Contribution
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <h3>
+              Implemented a persistent
+              <em>dark mode experience.</em>
+            </h3>
+
+
+            <p>
+              Implemented a dark mode toggle using CSS custom properties
+              and localStorage-based theme persistence, resolved a merge
+              conflict and collaborated with the maintainer through code review.
+            </p>
+
+
+            <div class="experience-tags">
+
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Chart.js</span>
+              <span>Git</span>
+
+            </div>
+
+
+            <a
+              class="project-link magnetic"
+              href="https://github.com/devmaster1987/expense-tracker/pull/8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View merged PR
+              <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section
+      class="skills section-pad"
+      id="skills"
+    >
+
+      <div class="section-kicker reveal">
+        04 / TOOLKIT
+      </div>
+
+
+      <div class="skills-intro">
+
+        <h2 class="display reveal">
+          The stack behind<br>
+          <em>the work.</em>
+        </h2>
+
+
+        <p class="reveal delay-1">
+          A focused technical toolkit for Data Science,
+          Machine Learning and applied AI roles.
+        </p>
+
+      </div>
+
+
+      <div
+        class="skill-marquee"
+        aria-hidden="true"
+      >
+
+        <div>
+          PYTHON · SQL · PANDAS · NUMPY · SCIKIT-LEARN · PYTORCH ·
+          TENSORFLOW · DATA VISUALIZATION · MACHINE LEARNING ·
+          DEEP LEARNING · RAG · LLMs · COMPUTER VISION · NLP ·
+          GIT · LINUX · POWER BI · DOCKER · PYTHON · SQL ·
+          PANDAS · NUMPY ·
+        </div>
+
+      </div>
+
+
       <div class="skill-grid">
-        <div class="skill-group reveal"><span>01</span><h3>Data Science</h3><p>Python · SQL · Pandas · NumPy · Scikit-learn · EDA · Feature Selection · Statistics · Data Visualization</p></div>
-        <div class="skill-group reveal delay-1"><span>02</span><h3>Machine Learning</h3><p>Regression · Classification · Clustering · Random Forest · Gradient Boosting · KNN · Naive Bayes · PCA · Anomaly Detection</p></div>
-        <div class="skill-group reveal delay-2"><span>03</span><h3>Deep Learning</h3><p>PyTorch · TensorFlow/Keras · CNNs · RNNs · LSTMs · Transformers · Computer Vision · NLP · Model Evaluation</p></div>
-        <div class="skill-group reveal delay-3"><span>04</span><h3>Generative AI</h3><p>RAG · Embeddings · Vector Databases · Prompt Engineering · LLM APIs · Retrieval Evaluation · Grounded generation</p></div>
-        <div class="skill-group reveal"><span>05</span><h3>Engineering</h3><p>Git · GitHub · HTML · CSS · JavaScript · Streamlit · REST APIs · FastAPI basics · Docker basics</p></div>
-        <div class="skill-group reveal delay-1"><span>06</span><h3>Data &amp; BI</h3><p>Power BI · Data Cleaning · ETL concepts · Dashboards · Business Intelligence · Data Storytelling</p></div>
+
+        <div class="skill-group reveal">
+          <span>01</span>
+          <h3>Data Science</h3>
+          <p>
+            Python · SQL · Pandas · NumPy · Scikit-learn · EDA ·
+            Feature Selection · Statistics · Data Visualization
+          </p>
+        </div>
+
+
+        <div class="skill-group reveal delay-1">
+          <span>02</span>
+          <h3>Machine Learning</h3>
+          <p>
+            Regression · Classification · Clustering · Random Forest ·
+            Gradient Boosting · KNN · Naive Bayes · PCA ·
+            Anomaly Detection
+          </p>
+        </div>
+
+
+        <div class="skill-group reveal delay-2">
+          <span>03</span>
+          <h3>Deep Learning</h3>
+          <p>
+            PyTorch · TensorFlow/Keras · CNNs · RNNs · LSTMs ·
+            Transformers · Computer Vision · NLP · Model Evaluation
+          </p>
+        </div>
+
+
+        <div class="skill-group reveal delay-3">
+          <span>04</span>
+          <h3>Generative AI</h3>
+          <p>
+            RAG · Embeddings · Vector Databases · Prompt Engineering ·
+            LLM APIs · Retrieval Evaluation · Grounded Generation
+          </p>
+        </div>
+
+
+        <div class="skill-group reveal">
+          <span>05</span>
+          <h3>Engineering</h3>
+          <p>
+            Git · GitHub · HTML · CSS · JavaScript · Streamlit ·
+            REST APIs · FastAPI · Docker
+          </p>
+        </div>
+
+
+        <div class="skill-group reveal delay-1">
+          <span>06</span>
+          <h3>Data &amp; BI</h3>
+          <p>
+            Power BI · Data Cleaning · ETL Concepts · Dashboards ·
+            Business Intelligence · Data Storytelling
+          </p>
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
 
     <section class="education section-pad">
+
       <div class="education-card reveal">
-        <div><span class="section-kicker">04 / EDUCATION</span><h2>Integrated M.Tech<br>Computer Science</h2><p>Vellore Institute of Technology, Vellore</p></div>
-        <div class="education-meta"><strong>2022 — 2027</strong><span>Specialization: Data Science</span><span>CGPA: 8.06</span></div>
+
+        <div>
+
+          <span class="section-kicker">
+            05 / EDUCATION
+          </span>
+
+          <h2>
+            Integrated M.Tech<br>
+            Computer Science
+          </h2>
+
+          <p>
+            Vellore Institute of Technology, Vellore
+          </p>
+
+        </div>
+
+
+        <div class="education-meta">
+
+          <strong>
+            2022 — 2027
+          </strong>
+
+          <span>
+            Specialization: Data Science
+          </span>
+
+          <span>
+            CGPA: 8.06
+          </span>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section class="credentials section-pad" id="credentials">
+
+    <!-- =========================
+         CREDENTIALS
+    ========================== -->
+
+    <!-- =========================
+         CREDENTIALS
+    ========================== -->
+
+    <section
+      class="credentials section-pad"
+      id="credentials"
+    >
+
       <div class="credentials-intro reveal">
-        <div><span class="section-kicker">05 / CREDENTIALS</span><h2 class="display small">Proof behind the <em>portfolio.</em></h2></div>
-        <p>Certificates and structured programs that support the technical work shown above.</p>
+
+        <div>
+          <span class="section-kicker">06 / CREDENTIALS</span>
+
+          <h2 class="display small">
+            Proof behind the
+            <em>portfolio.</em>
+          </h2>
+        </div>
+
+        <p>
+          Certificates and structured programs supporting my technical
+          development across machine learning, analytics and software engineering.
+        </p>
+
       </div>
+
+
       <div class="credential-feature reveal">
+
         <div class="credential-feature-copy">
+
           <span class="credential-number">01</span>
+
           <span class="credential-provider">FORAGE · JUNE 2025</span>
-          <h3>Tata GenAI Powered<br><em>Data Analytics</em> Job Simulation</h3>
-          <p>Exploratory data analysis, risk profiling, predictive delinquency analysis, business reporting and AI-driven data storytelling.</p>
-          <button class="certificate-button magnetic" data-cert="assets/forage_tata_genai.png">View certificate <span>↗</span></button>
+
+          <h3>
+            Tata GenAI Powered<br>
+            <em>Data Analytics</em><br>
+            Job Simulation
+          </h3>
+
+          <p>
+            Exploratory data analysis, risk profiling, predictive delinquency
+            analysis, business reporting and AI-driven data storytelling.
+          </p>
+
+          <a
+            class="project-link magnetic"
+            href="https://drive.google.com/file/d/1U_E17RIo5PzbI_fBHfM75f_XlSmRneUq/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View credential <span>↗</span>
+          </a>
+
         </div>
-        <div class="credential-feature-image certificate-trigger" data-cert="assets/forage_tata_genai.png" role="button" tabindex="0" aria-label="View Tata GenAI certificate">
-          <img src="assets/forage_tata_genai.png" alt="Tata GenAI Powered Data Analytics Job Simulation certificate">
-          <span class="image-overlay">VIEW CERTIFICATE <b>↗</b></span>
+
+        <div class="credential-feature-image">
+          <img
+            src="assets/forage_tata_genai.jpg"
+            alt="Tata GenAI Powered Data Analytics Job Simulation certificate"
+          >
         </div>
+
       </div>
+
 
       <div class="credential-grid">
-        <article class="credential reveal certificate-trigger" data-cert="assets/100xdev_fullstack.png" role="button" tabindex="0">
-          <div class="credential-img"><img src="assets/100xdev_fullstack.png" alt="100xdevs full stack certificate"></div>
-          <div><span>100XDEVS · FEB 2026</span><h3>0–100 Full Stack Web Development</h3><p>Structured full-stack development course covering modern web application fundamentals.</p></div>
-        </article>
-        <article class="credential reveal delay-1 certificate-trigger" data-cert="assets/coursevita_vibecoding.png" role="button" tabindex="0">
-          <div class="credential-img"><img src="assets/coursevita_vibecoding.png" alt="CourseVita Vibe Coding 2025 certificate"></div>
-          <div><span>COURSEVITA · JUNE 2025</span><h3>Vibe Coding 2025</h3><p>Participated in a coding challenge focused on building and experimenting with technology.</p></div>
-        </article>
-        <article class="credential reveal delay-2">
-          <div class="credential-img certificate-mark"><span>ML</span></div>
-          <div><span>EMBRIZON TECHNOLOGIES · 2024</span><h3>Machine Learning with Python</h3><p>Machine learning training experience focused on Python-based workflows and practical model building.</p></div>
-        </article>
-      </div>
-    </section>
 
-    <section class="contact section-pad" id="contact">
-      <div class="contact-shell reveal">
-        <div class="contact-left">
-          <span class="section-kicker">06 / CONTACT</span>
-          <h2>Let's build<br>something <em>useful.</em></h2>
-          <p>I'm looking for entry-level opportunities in Data Science, Machine Learning and applied AI. If you're hiring, collaborating or have an interesting problem, I'd love to hear from you.</p>
-          <div class="contact-actions">
-            <a class="button button-light magnetic" href="mailto:kalvakuntlaritanshukumar@gmail.com?subject=Portfolio%20Opportunity">Email me <span>↗</span></a>
-            <a class="text-link magnetic" href="https://www.linkedin.com/in/ritanshu-kumar" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+        <div class="credential reveal">
+
+          <div class="credential-img">
+            <img
+              src="assets/100xdev_fullstack.jpg"
+              alt="100xDevs Live Full Stack Open Source Cohort-1 certificate"
+            >
           </div>
+
+          <div>
+            <span class="credential-provider">100XDEV</span>
+            <h3>Live Full Stack Open Source Cohort-1</h3>
+
+            <a
+              class="project-link magnetic"
+              href="https://app.100xdevs.com/certificate/verify/C30IROOM"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Verify credential <span>↗</span>
+            </a>
+          </div>
+
         </div>
-        <div class="contact-right">
-          <div><span>EMAIL</span><a href="mailto:kalvakuntlaritanshukumar@gmail.com">kalvakuntlaritanshukumar@gmail.com</a></div>
-          <div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ritanshu-kumar" target="_blank" rel="noopener noreferrer">linkedin.com/in/ritanshu-kumar ↗</a></div>
-          <div><span>GITHUB</span><a href="https://github.com/Ritanshu-Kumar" target="_blank" rel="noopener noreferrer">github.com/Ritanshu-Kumar ↗</a></div>
-          <div><span>BASED IN</span><p>India · Open to entry-level opportunities</p></div>
+
+
+        <div class="credential reveal delay-1">
+
+          <div class="credential-img">
+            <img
+              src="assets/manmun_completion.jpg"
+              alt="MANMUN PVT LTD Machine Learning internship completion certificate"
+            >
+          </div>
+
+          <div>
+            <span class="credential-provider">MANMUN PVT LTD</span>
+            <h3>Machine Learning Internship</h3>
+
+            <p>
+              Machine Learning Intern · June 2025 – July 2025
+            </p>
+          </div>
+
         </div>
+
+
+        <div class="credential reveal delay-2">
+
+          <div class="credential-img">
+            <img
+              src="assets/embrizon_ml_python.jpg"
+              alt="Embrizon Technologies Machine Learning with Python certificate"
+            >
+          </div>
+
+          <div>
+            <span class="credential-provider">EMBRIZON</span>
+            <h3>Machine Learning with Python</h3>
+
+            <a
+              class="project-link magnetic"
+              href="https://drive.google.com/file/d/1b1bmrqHvlRc8w9gtxt_4iu6CK1ObOIQK/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View credential <span>↗</span>
+            </a>
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
 
-    <section class="resume-section" id="resume">
-      <div class="resume-intro reveal">
+    <!-- =========================
+         RESUME
+    ========================== -->
+
+    <section
+      class="resume section-pad"
+      id="resume"
+    >
+
+      <div class="resume-head reveal">
+
         <div>
           <span class="section-kicker">07 / RESUME</span>
-          <h2>Everything<br><em>in one page.</em></h2>
+
+          <h2 class="display small">
+            A closer look at my
+            <em>experience.</em>
+          </h2>
         </div>
-        <div class="resume-copy">
-          <p>My current placement resume — covering education, internships, selected projects, technical skills and certifications.</p>
-          <div class="resume-actions">
-            <a class="resume-btn magnetic" href="assets/Ritanshu_Kumar_Resume.pdf" target="_blank" rel="noopener">View resume ↗</a>
-            <a class="resume-download" href="assets/Ritanshu_Kumar_Resume.pdf" download>Download PDF ↓</a>
+
+        <div class="resume-actions">
+
+          <a
+            id="resumeOpenBtn"
+            class="button button-light magnetic"
+            href="assets/Ritanshu_CV_26_5.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open resume <span>↗</span>
+          </a>
+
+          <a
+            id="resumeDownloadBtn"
+            class="text-link magnetic"
+            href="assets/Ritanshu_CV_26_5.pdf"
+            download="Ritanshu_CV_26_5.pdf"
+          >
+            Download PDF <span>↓</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div
+        class="resume-viewer reveal"
+        id="resumeViewer"
+        data-pdf="assets/Ritanshu_CV_26_5.pdf"
+      >
+        <div class="resume-loading">LOADING RESUME…</div>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section
+      class="contact section-pad"
+      id="contact"
+    >
+
+      <div class="contact-shell reveal">
+
+        <div class="contact-left">
+
+          <span class="section-kicker">
+            08 / CONTACT
+          </span>
+
+
+          <h2>
+            Let's build<br>
+            something
+            <em>useful.</em>
+          </h2>
+
+
+          <p>
+            I'm looking for entry-level opportunities in Data Science,
+            Machine Learning and applied AI. If you're hiring,
+            collaborating or have an interesting problem,
+            I'd love to hear from you.
+          </p>
+
+
+          <div class="contact-actions">
+
+            <a
+              class="button button-light magnetic"
+              href="mailto:kalvakuntlaritanshukumar@gmail.com?subject=Portfolio%20Opportunity"
+            >
+              Email me
+              <span>↗</span>
+            </a>
+
+
+            <a
+              class="text-link magnetic"
+              href="https://www.linkedin.com/in/ritanshukumar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+              <span>↗</span>
+            </a>
+
           </div>
+
         </div>
-      </div>
-      <div class="resume-frame reveal">
-        <div class="resume-frame-bar">
-          <span><i></i> RITANSHU_KUMAR_RESUME.pdf</span>
-          <span>ONE PAGE / A4</span>
+
+
+        <div class="contact-right">
+
+          <div>
+
+            <span>
+              EMAIL
+            </span>
+
+            <a href="mailto:kalvakuntlaritanshukumar@gmail.com">
+              kalvakuntlaritanshukumar@gmail.com
+            </a>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              LINKEDIN
+            </span>
+
+            <a
+              href="https://www.linkedin.com/in/ritanshukumar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/ritanshukumar ↗
+            </a>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              GITHUB
+            </span>
+
+            <a
+              href="https://github.com/Ritanshu-Kumar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/Ritanshu-Kumar ↗
+            </a>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              BASED IN
+            </span>
+
+            <p>
+              India · Open to entry-level opportunities
+            </p>
+
+          </div>
+
         </div>
-        <iframe
-          src="assets/Ritanshu_Kumar_Resume.pdf#toolbar=0&navpanes=0"
-          title="Ritanshu Kumar Resume"
-          loading="lazy"></iframe>
+
       </div>
+
     </section>
 
   </main>
 
-  <div class="certificate-modal" id="certificateModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Certificate preview">
-      <button class="modal-close" data-close-modal aria-label="Close certificate preview">×</button>
-      <img id="certificateModalImage" src="" alt="Certificate preview">
-      <div class="modal-caption"><span>CREDENTIAL PREVIEW</span><span>CLICK OUTSIDE TO CLOSE</span></div>
-    </div>
-  </div>
+
+  <!-- FOOTER -->
 
   <footer>
-    <div><strong>R/</strong><span>© 2026 Ritanshu Kumar</span></div>
-    <p>Data Science · Machine Learning · Applied AI</p>
-    <a href="#top">Back to top ↑</a>
+
+    <div>
+
+      <strong>
+        R/
+      </strong>
+
+      <span>
+        © 2026 Ritanshu Kumar
+      </span>
+
+    </div>
+
+
+    <p>
+      Data Science · Machine Learning · Applied AI
+    </p>
+
+
+    <a href="#top">
+      Back to top ↑
+    </a>
+
   </footer>
-  <script src="script.js"></script>
+
+
+  <!-- EXTERNAL JAVASCRIPT ONLY -->
+
+  <script src="resume-data.js" defer></script>
+  <script src="script.js" defer></script>
+
 </body>
+
 </html>

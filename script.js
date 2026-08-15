@@ -56,7 +56,7 @@
 
   // Active nav section.
   const navLinks = $$('.desktop-nav a');
-  const sections = ['experience','work','skills','credentials','contact'].map(id => document.getElementById(id)).filter(Boolean);
+  const sections = ['experience','work','opensource','skills','credentials','resume','contact'].map(id => document.getElementById(id)).filter(Boolean);
   const navObserver = new IntersectionObserver(entries => entries.forEach(entry => {
     if (entry.isIntersecting) navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
   }), { rootMargin: '-35% 0px -55% 0px' });
@@ -132,4 +132,125 @@
   $$('.certificate-button').forEach(btn => btn.addEventListener('click', e => { e.stopPropagation(); openCertificate(btn.dataset.cert); }));
   $$('[data-close-modal]').forEach(el => el.addEventListener('click', closeCertificate));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCertificate(); });
+
+  // Point the Open/Download buttons at a Blob URL built from the embedded
+  // PDF data (resume-data.js), so they work purely from within the page
+  // itself — even if the assets/ folder isn't present alongside index.html.
+  if (typeof RESUME_PDF_BASE64 !== 'undefined' && RESUME_PDF_BASE64) {
+    try {
+      const binary = atob(RESUME_PDF_BASE64);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      const blobUrl = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
+
+      const openBtn = $('#resumeOpenBtn');
+      const downloadBtn = $('#resumeDownloadBtn');
+      if (openBtn) openBtn.href = blobUrl;
+      if (downloadBtn) downloadBtn.href = blobUrl;
+    } catch (error) {
+      console.warn('Resume buttons: falling back to assets/ path.', error);
+    }
+  }
+
+  // Clean, browser-chrome-free resume viewer using PDF.js.
+  const resumeViewer = $('#resumeViewer');
+  if (resumeViewer) {
+    const pdfPath = resumeViewer.dataset.pdf;
+    const pdfjsUrl = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs';
+    const workerUrl = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs';
+
+    const showResumeError = () => {
+      resumeViewer.innerHTML = `<div class="resume-error">Resume preview could not be rendered here.<br><a href="${pdfPath}" target="_blank" rel="noopener noreferrer">Open the PDF directly ↗</a></div>`;
+    };
+
+    const renderResume = async () => {
+      try {
+        const pdfjsLib = await import(pdfjsUrl);
+        pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
+
+        // Load from the embedded base64 copy (resume-data.js) instead of
+        // fetching the PDF file. Fetch/XHR of local files is blocked by
+        // browsers under the file:// protocol, so this is what lets the
+        // full resume render inline with zero server required.
+        let loadingTask;
+        if (typeof RESUME_PDF_BASE64 !== 'undefined' && RESUME_PDF_BASE64) {
+          const binary = atob(RESUME_PDF_BASE64);
+          const bytes = new Uint8Array(binary.length);
+          for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+          loadingTask = pdfjsLib.getDocument({ data: bytes });
+        } else {
+          loadingTask = pdfjsLib.getDocument(pdfPath);
+        }
+
+        const pdf = await loadingTask.promise;
+        resumeViewer.innerHTML = '';
+
+        for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+          const page = await pdf.getPage(pageNumber);
+          const baseViewport = page.getViewport({ scale: 1 });
+          const targetWidth = Math.min(resumeViewer.clientWidth, 860);
+          const scale = targetWidth / baseViewport.width;
+          const viewport = page.getViewport({ scale });
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+          const pageWrap = document.createElement('div');
+          pageWrap.className = 'resume-page-wrap';
+          pageWrap.style.width = `${viewport.width}px`;
+          pageWrap.style.height = `${viewport.height}px`;
+
+          const canvas = document.createElement('canvas');
+          canvas.className = 'resume-page';
+          canvas.width = Math.floor(viewport.width * dpr);
+          canvas.height = Math.floor(viewport.height * dpr);
+          canvas.style.width = `${viewport.width}px`;
+          canvas.style.height = `${viewport.height}px`;
+          pageWrap.appendChild(canvas);
+          resumeViewer.appendChild(pageWrap);
+
+          const context = canvas.getContext('2d', { alpha: false });
+          await page.render({
+            canvasContext: context,
+            viewport,
+            transform: dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null
+          }).promise;
+
+          // Overlay real, clickable links (GitHub, Demo, portfolio, email, etc.)
+          // exactly where they sit in the PDF, using each link annotation's
+          // rect converted into on-screen viewport coordinates.
+          const annotations = await page.getAnnotations();
+          const links = annotations.filter(a => a.subtype === 'Link' && (a.url || a.unsafeUrl));
+          if (links.length) {
+            const linkLayer = document.createElement('div');
+            linkLayer.className = 'resume-link-layer';
+            links.forEach(annotation => {
+              const url = annotation.url || annotation.unsafeUrl;
+              const [rx1, ry1, rx2, ry2] = viewport.convertToViewportRectangle(annotation.rect);
+              const left = Math.min(rx1, rx2);
+              const top = Math.min(ry1, ry2);
+              const width = Math.abs(rx2 - rx1);
+              const height = Math.abs(ry2 - ry1);
+
+              const a = document.createElement('a');
+              a.href = url;
+              a.target = '_blank';
+              a.rel = 'noopener noreferrer';
+              a.title = url;
+              a.style.left = `${left}px`;
+              a.style.top = `${top}px`;
+              a.style.width = `${width}px`;
+              a.style.height = `${height}px`;
+              linkLayer.appendChild(a);
+            });
+            pageWrap.appendChild(linkLayer);
+          }
+        }
+      } catch (error) {
+        console.warn('Resume viewer:', error);
+        showResumeError();
+      }
+    };
+
+    renderResume();
+  }
+
 })();
