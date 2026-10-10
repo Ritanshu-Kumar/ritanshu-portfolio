@@ -12,17 +12,17 @@
 
   <meta
     name="description"
-    content="Kalvakuntla Ritanshu Kumar — Data Science student focused on Machine Learning, Deep Learning, analytics and applied AI."
+    content="Kalvakuntla Ritanshu Kumar — Computer Science student focused on Data Science, Machine Learning and Applied AI."
   >
 
   <meta
     property="og:title"
-    content="Ritanshu Kumar — Data Science × Machine Learning"
+    content="Ritanshu Kumar — Data Science · ML · Applied AI"
   >
 
   <meta
     property="og:description"
-    content="Portfolio of applied data science, machine learning, deep learning and AI projects."
+    content="Portfolio of applied AI, machine learning, data science, computer vision, agent systems and research-driven engineering."
   >
 
   <meta
@@ -30,7 +30,19 @@
     content="website"
   >
 
-  <title>Ritanshu Kumar — Data Science × Machine Learning</title>
+  <meta property="og:url" content="https://ritanshu-portfolio.vercel.app/">
+  <link rel="canonical" href="https://ritanshu-portfolio.vercel.app/">
+  <meta property="og:image" content="https://ritanshu-portfolio.vercel.app/assets/portfolio-og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ritanshu Kumar — Data Science, Machine Learning and Applied AI portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ritanshu Kumar — Data Science · ML · Applied AI">
+  <meta name="twitter:description" content="Selected projects in data science, machine learning, applied AI, computer vision, agent systems and research.">
+  <meta name="twitter:image" content="https://ritanshu-portfolio.vercel.app/assets/portfolio-og.png">
+
+  <title>Ritanshu Kumar — Data Science · ML · Applied AI</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,7 +82,7 @@
     <div class="loader-inner">
 
       <div class="loader-top">
-        <span>R/ / 2026</span>
+        <span>R/ · 2026</span>
         <span>PORTFOLIO</span>
       </div>
 
@@ -222,8 +234,10 @@
 
           <div class="eyebrow reveal">
             DATA SCIENCE
-            <span>×</span>
-            MACHINE LEARNING
+            <span>·</span>
+            ML
+            <span>·</span>
+            APPLIED AI
           </div>
 
 
@@ -266,6 +280,16 @@
               href="#contact"
             >
               Get in touch
+              <span>↗</span>
+            </a>
+
+            <a
+              class="text-link magnetic"
+              href="https://github.com/Ritanshu-Kumar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
               <span>↗</span>
             </a>
 
@@ -668,10 +692,9 @@
 
       <div class="project-stack">
 
-
-        <!-- FORMWISE -->
-
-        <article
+        <div class="project-group-head"><span>FEATURED / 01—03</span><p>Three projects that show product delivery, agent infrastructure and deep-learning research.</p></div>
+        <div class="project-spotlight-list">
+<article
           class="project project-featured reveal interactive-card"
           data-cursor="OPEN"
         >
@@ -762,16 +785,213 @@
 
         </article>
 
+<article class="project project-featured reveal interactive-card" data-cursor="VIEW">
+          <div class="project-index">02</div>
+          <div class="project-main">
+            <div class="project-topline"><span>AGENT INFRASTRUCTURE</span><span>APPLIED AI / BACKEND</span></div>
+            <h3>Agent<br><em>Runtime</em></h3>
+            <p>Built a Python runtime for tool-using AI agents, with typed tool definitions, argument validation, execution-state tracking, retries and failure handling. Includes an API layer, persistence and an operator-facing console.</p>
+            <div class="tag-row"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Alembic</span><span>Docker Compose</span><span>Tool Calling</span></div>
+            <a class="project-link magnetic" href="https://github.com/Ritanshu-Kumar/agentruntime" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
+          </div>
+          <div class="project-visual agent-runtime-visual" aria-label="Actual AgentRuntime dashboard screenshot from the project repository">
+            <a class="agent-runtime-screenshot-link" href="https://github.com/Ritanshu-Kumar/agentruntime/blob/main/docs/images/dashboard1.png" target="_blank" rel="noopener noreferrer" aria-label="Open the actual AgentRuntime dashboard screenshot">
+              <img class="agent-runtime-screenshot" src="https://raw.githubusercontent.com/Ritanshu-Kumar/agentruntime/main/docs/images/dashboard1.png" alt="AgentRuntime browser dashboard showing run execution and status details" loading="lazy" decoding="async">
+            </a>
+            <span class="screenshot-caption">REAL PROJECT DASHBOARD · SOURCE: GITHUB REPOSITORY</span>
+          </div>
+        </article>
 
-        <!-- RAG -->
-
-        <article
-          class="project reveal interactive-card"
+<article
+          class="project project-medical project-featured reveal interactive-card"
           data-cursor="VIEW"
         >
 
           <div class="project-index">
-            02
+            03
+          </div>
+
+
+          <div class="project-main">
+
+            <div class="project-topline">
+              <span>MEDICAL AI</span>
+              <span>CNN + TRANSFORMER</span>
+            </div>
+
+
+            <h3>
+              HybridXRayNet<br>
+              <em>Pneumonia Detection</em>
+            </h3>
+
+
+            <p>
+              Built a hybrid CNN-Transformer model for chest X-ray pneumonia
+              classification using multi-scale CNN feature extraction,
+              residual attention, Transformer Encoder, adaptive feature
+              fusion and Grad-CAM for interpretability.
+            </p>
+
+
+            <div class="result-strip">
+
+              <div>
+                <strong>83.17%</strong>
+                <span>accuracy</span>
+              </div>
+
+              <div>
+                <strong>98.97%</strong>
+                <span>recall</span>
+              </div>
+
+              <div>
+                <strong>96.67%</strong>
+                <span>ROC-AUC</span>
+              </div>
+
+            </div>
+
+            <p class="project-evidence-note">
+              Held-out test set: 624 images (234 NORMAL / 390 PNEUMONIA) ·
+              Precision 79.26% · Specificity 56.84%.
+            </p>
+
+            <div class="tag-row">
+
+              <span>PyTorch</span>
+              <span>CNN</span>
+              <span>Transformer</span>
+              <span>Attention</span>
+              <span>Grad-CAM</span>
+
+            </div>
+
+
+            <a
+              class="project-link magnetic"
+              href="https://github.com/Ritanshu-Kumar/HybridXRayNet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View project
+              <span>↗</span>
+            </a>
+
+          </div>
+
+
+          <div class="project-visual xray-visual">
+
+            <img
+              src="assets/hybridxraynet_demo.jpg"
+              alt="HybridXRayNet demo showing 99.98% confidence pneumonia classification with Grad-CAM heatmap"
+            >
+
+          </div>
+
+        </article>
+        </div>
+
+        <div class="project-group-head"><span>MORE WORK / 04—10</span><p>Computer vision, retrieval, reinforcement learning, quantitative research and systems projects.</p></div>
+        <div class="project-secondary-grid">
+<article
+          class="project project-compact reveal interactive-card"
+          data-cursor="VIEW"
+        >
+
+          <div class="project-index">
+            04
+          </div>
+
+
+          <div class="project-main">
+
+            <div class="project-topline">
+              <span>DEEP LEARNING</span>
+              <span>COMPUTER VISION</span>
+            </div>
+
+
+            <h3>
+              CAPTCHA Recognition<br>
+              <em>with CRNN + CTC</em>
+            </h3>
+
+
+            <p>
+              Developed an end-to-end CAPTCHA recognition system combining
+              ResNet18 visual feature extraction, bidirectional GRU sequence
+              modeling and CTC decoding without explicit character segmentation.
+            </p>
+
+
+            <div class="result-strip">
+
+              <div>
+                <strong>99.30%</strong>
+                <span>exact string</span>
+              </div>
+
+              <div>
+                <strong>99.86%</strong>
+                <span>character accuracy</span>
+              </div>
+
+              <div>
+                <strong>9,955</strong>
+                <span>images</span>
+              </div>
+
+            </div>
+
+            <p class="project-evidence-note">
+              80/20 train/test split · 1,991-image held-out test set.
+            </p>
+
+            <div class="tag-row">
+
+              <span>PyTorch</span>
+              <span>ResNet18</span>
+              <span>BiGRU</span>
+              <span>CTC Loss</span>
+              <span>OCR</span>
+
+            </div>
+
+
+            <a
+              class="project-link magnetic"
+              href="https://github.com/Ritanshu-Kumar/captcha-recognition-crnn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View project
+              <span>↗</span>
+            </a>
+
+          </div>
+
+
+          <div class="project-visual captcha-visual">
+
+            <img
+              src="assets/captcha_predictions.jpg"
+              alt="CRNN CAPTCHA recognition predictions vs ground truth, showing exact matches across sample images"
+            >
+
+          </div>
+
+        </article>
+
+<article
+          class="project project-compact reveal interactive-card"
+          data-cursor="VIEW"
+        >
+
+          <div class="project-index">
+            05
           </div>
 
 
@@ -868,195 +1088,89 @@
 
         </article>
 
-
-        <!-- HYBRIDXRayNet -->
-
-        <article
-          class="project project-medical reveal interactive-card"
-          data-cursor="VIEW"
-        >
-
-          <div class="project-index">
-            03
-          </div>
-
-
+<article class="project project-compact reveal interactive-card" data-cursor="VIEW">
+          <div class="project-index">06</div>
           <div class="project-main">
-
-            <div class="project-topline">
-              <span>MEDICAL AI</span>
-              <span>CNN + TRANSFORMER</span>
-            </div>
-
-
-            <h3>
-              HybridXRayNet<br>
-              <em>Pneumonia Detection</em>
-            </h3>
-
-
-            <p>
-              Built a hybrid CNN-Transformer model for chest X-ray pneumonia
-              classification using multi-scale CNN feature extraction,
-              residual attention, Transformer Encoder, adaptive feature
-              fusion and Grad-CAM for interpretability.
-            </p>
-
-
-            <div class="result-strip">
-
-              <div>
-                <strong>83.17%</strong>
-                <span>accuracy</span>
-              </div>
-
-              <div>
-                <strong>98.97%</strong>
-                <span>recall</span>
-              </div>
-
-              <div>
-                <strong>96.67%</strong>
-                <span>ROC-AUC</span>
-              </div>
-
-            </div>
-
-
-            <div class="tag-row">
-
-              <span>PyTorch</span>
-              <span>CNN</span>
-              <span>Transformer</span>
-              <span>Attention</span>
-              <span>Grad-CAM</span>
-
-            </div>
-
-
-            <a
-              class="project-link magnetic"
-              href="https://github.com/Ritanshu-Kumar/HybridXRayNet"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View project
-              <span>↗</span>
-            </a>
-
+            <div class="project-topline"><span>REINFORCEMENT LEARNING</span><span>AI AGENTS</span></div>
+            <h3>Adaptive 2D<br><em>AI Agent</em></h3>
+            <p>Explored learning-based navigation in a custom 2D environment, progressing through Q-learning, DQN, imitation learning and PPO. The repository reports promising validation and unseen-map results from an individual completed run.</p>
+            <div class="tag-row"><span>Python</span><span>Reinforcement Learning</span><span>PPO</span><span>DQN</span><span>Imitation Learning</span></div>
+            <a class="project-link magnetic" href="https://github.com/Ritanshu-Kumar/adaptive-2d-ai-agent" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
           </div>
-
-
-          <div class="project-visual xray-visual">
-
-            <img
-              src="assets/hybridxraynet_demo.jpg"
-              alt="HybridXRayNet demo showing 99.98% confidence pneumonia classification with Grad-CAM heatmap"
-            >
-
+          <div class="project-visual adaptive-agent-visual" aria-label="Stylized 2D navigation environment illustration">
+            <div class="agent-map"><span class="map-start">START</span><span class="map-goal">GOAL</span><i class="obstacle o1"></i><i class="obstacle o2"></i><i class="obstacle o3"></i><i class="agent-route"></i><b class="agent-dot"></b></div>
+            <span class="map-caption">POLICY LEARNING / NAVIGATION</span>
           </div>
-
         </article>
 
-
-        <!-- CAPTCHA -->
-
-        <article
-          class="project reveal interactive-card"
-          data-cursor="VIEW"
-        >
-
-          <div class="project-index">
-            04
-          </div>
-
-
+<article class="project project-compact reveal interactive-card" data-cursor="VIEW">
+          <div class="project-index">07</div>
           <div class="project-main">
-
-            <div class="project-topline">
-              <span>DEEP LEARNING</span>
-              <span>COMPUTER VISION</span>
-            </div>
-
-
-            <h3>
-              CAPTCHA Recognition<br>
-              <em>with CRNN + CTC</em>
-            </h3>
-
-
-            <p>
-              Developed an end-to-end CAPTCHA recognition system combining
-              ResNet18 visual feature extraction, bidirectional GRU sequence
-              modeling and CTC decoding without explicit character segmentation.
-            </p>
-
-
-            <div class="result-strip">
-
-              <div>
-                <strong>99.30%</strong>
-                <span>exact string</span>
-              </div>
-
-              <div>
-                <strong>99.86%</strong>
-                <span>character accuracy</span>
-              </div>
-
-              <div>
-                <strong>9,955</strong>
-                <span>images</span>
-              </div>
-
-            </div>
-
-
-            <div class="tag-row">
-
-              <span>PyTorch</span>
-              <span>ResNet18</span>
-              <span>BiGRU</span>
-              <span>CTC Loss</span>
-              <span>OCR</span>
-
-            </div>
-
-
-            <a
-              class="project-link magnetic"
-              href="https://github.com/Ritanshu-Kumar/captcha-recognition-crnn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View project
-              <span>↗</span>
-            </a>
-
+            <div class="project-topline"><span>QUANTITATIVE RESEARCH</span><span>MARKET MICROSTRUCTURE</span></div>
+            <h3>MERIT<br><em>Execution Testbed</em></h3>
+            <p>A research and simulation framework for market-making experiments, built around order-book reconstruction from market-event data, inventory and risk controls, execution costs, and realistic fill assumptions. It is a research testbed, not a live trading bot.</p>
+            <div class="tag-row"><span>Python</span><span>Market Making</span><span>ITCH Market Data</span><span>Risk Management</span><span>Simulation</span></div>
+            <a class="project-link magnetic" href="https://github.com/Ritanshu-Kumar/MERIT" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
           </div>
-
-
-          <div class="project-visual captcha-visual">
-
-            <img
-              src="assets/captcha_predictions.jpg"
-              alt="CRNN CAPTCHA recognition predictions vs ground truth, showing exact matches across sample images"
-            >
-
+          <div class="project-visual merit-visual" aria-label="MERIT M11 empirical output: out-of-sample conditional markout R-squared by horizon">
+            <div class="merit-results-window">
+              <div class="merit-results-head">
+                <span>RESEARCH OUTPUT / M11</span>
+                <span>NASDAQ ITCH · 2019-07-30 · 5 EQUITIES</span>
+              </div>
+              <h4>Conditional adverse selection</h4>
+              <p class="merit-results-context">AAPL · AMZN · GOOG · INTC · MSFT</p>
+              <div class="merit-sample-grid">
+                <div><span>TRAIN FILLS</span><strong>8,119</strong></div>
+                <div><span>TEST FILLS</span><strong>5,686</strong></div>
+                <div><span>1s OOS R²</span><strong>−0.0061</strong></div>
+              </div>
+              <div class="merit-horizon-title">OUT-OF-SAMPLE R² BY HORIZON</div>
+              <div class="merit-horizon-row"><span>10 ms</span><i><b style="width:100%"></b></i><strong>−0.0743</strong></div>
+              <div class="merit-horizon-row"><span>100 ms</span><i><b style="width:18.7%"></b></i><strong>−0.0139</strong></div>
+              <div class="merit-horizon-row"><span>500 ms</span><i><b style="width:32.8%"></b></i><strong>−0.0243</strong></div>
+              <div class="merit-horizon-row"><span>1 s</span><i><b style="width:8.3%"></b></i><strong>−0.0061</strong></div>
+              <p class="merit-r2-note">NEGATIVE R² · CLOSER TO 0 IS BETTER</p>
+              <div class="merit-finding"><span>FINDING</span><strong>No demonstrated OOS predictive improvement</strong></div>
+            </div>
           </div>
-
         </article>
 
+<article class="project project-compact reveal interactive-card" data-cursor="VIEW">
+          <div class="project-index">08</div>
+          <div class="project-main">
+            <div class="project-topline"><span>CONSTRAINT-BASED SYSTEMS</span><span>LAYOUT ENGINEERING</span></div>
+            <h3>Layout<br><em>Forge</em></h3>
+            <p>Designed a constraint-based adaptive layout resolver for ad specifications across different screen sizes and surfaces. It considers safe areas, minimum text and tap targets, and overlap validation, with a React demo.</p>
+            <div class="tag-row"><span>TypeScript</span><span>React</span><span>Constraint Resolution</span><span>Responsive Layout</span></div>
+            <a class="project-link magnetic" href="https://github.com/Ritanshu-Kumar/layoutforge" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
+          </div>
+          <div class="project-visual layoutforge-visual" aria-label="Adaptive layout constraint preview">
+            <div class="layout-canvas"><span class="layout-safe">SAFE AREA</span><div class="layout-ad layout-ad-large"><b>CAMPAIGN</b><small>Primary message</small><i>CTA →</i></div><div class="layout-ad layout-ad-small"><b>OFFER</b><small>Supporting copy</small></div><span class="layout-check">✓ NO OVERLAP</span></div>
+          </div>
+        </article>
 
-        <!-- SATELLITE PROJECT -->
+<article class="project project-compact reveal interactive-card" data-cursor="VIEW">
+          <div class="project-index">09</div>
+          <div class="project-main">
+            <div class="project-topline"><span>PRODUCT CONCEPT / PROTOTYPE</span><span>TRUST INFRASTRUCTURE</span></div>
+            <h3>Real Estate<br><em>Trust Network</em></h3>
+            <p>A private-by-default platform concept for evidence-backed transaction attribution and portable professional reputation in the real-estate ecosystem, initially focused on Hyderabad. The project remains in discovery and validation.</p>
+            <div class="tag-row"><span>Product Architecture</span><span>Reputation Systems</span><span>Evidence Provenance</span><span>Python</span></div>
+            <a class="project-link magnetic" href="https://github.com/Ritanshu-Kumar/real-estate-trust-network" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
+          </div>
+          <div class="project-visual trust-network-visual" aria-label="Evidence-backed professional trust network illustration">
+            <div class="trust-network"><span class="trust-person tp1">AGENT</span><span class="trust-person tp2">CLIENT</span><span class="trust-person tp3">BROKER</span><span class="trust-core">VERIFIED<br>RECORD</span><i class="trust-link tl1"></i><i class="trust-link tl2"></i><i class="trust-link tl3"></i></div><small>ATTRIBUTION · EVIDENCE · PORTABLE TRUST</small>
+          </div>
+        </article>
 
-        <article
-          class="project reveal interactive-card"
+<article
+          class="project project-compact project-compact-wide reveal interactive-card"
           data-cursor="ONGOING"
         >
 
           <div class="project-index">
-            05
+            10
           </div>
 
 
@@ -1118,6 +1232,8 @@
           </div>
 
         </article>
+        </div>
+
 
       </div>
 
@@ -1276,9 +1392,9 @@
 
         <div>
           PYTHON · SQL · PANDAS · NUMPY · SCIKIT-LEARN · PYTORCH ·
-          TENSORFLOW · DATA VISUALIZATION · MACHINE LEARNING ·
+          DATA VISUALIZATION · MACHINE LEARNING ·
           DEEP LEARNING · RAG · LLMs · COMPUTER VISION · NLP ·
-          GIT · LINUX · POWER BI · DOCKER · PYTHON · SQL ·
+          GIT · LINUX · DOCKER · PYTHON · SQL ·
           PANDAS · NUMPY ·
         </div>
 
@@ -1312,7 +1428,7 @@
           <span>03</span>
           <h3>Deep Learning</h3>
           <p>
-            PyTorch · TensorFlow/Keras · CNNs · RNNs · LSTMs ·
+            PyTorch · CNNs · RNNs · LSTMs ·
             Transformers · Computer Vision · NLP · Model Evaluation
           </p>
         </div>
@@ -1340,10 +1456,10 @@
 
         <div class="skill-group reveal delay-1">
           <span>06</span>
-          <h3>Data &amp; BI</h3>
+          <h3>Data Workflows</h3>
           <p>
-            Power BI · Data Cleaning · ETL Concepts · Dashboards ·
-            Business Intelligence · Data Storytelling
+            Data Cleaning · EDA · ETL Concepts · Visualization ·
+            Metrics Reporting · Insight Communication
           </p>
         </div>
 
@@ -1403,10 +1519,6 @@
          CREDENTIALS
     ========================== -->
 
-    <!-- =========================
-         CREDENTIALS
-    ========================== -->
-
     <section
       class="credentials section-pad"
       id="credentials"
@@ -1461,7 +1573,10 @@
 
         </div>
 
-        <div class="credential-feature-image">
+        <div class="credential-feature-image certificate-trigger"
+          data-cert="assets/forage_tata_genai.jpg"
+          role="button" tabindex="0"
+          aria-label="Preview Tata GenAI Data Analytics certificate">
           <img
             src="assets/forage_tata_genai.jpg"
             alt="Tata GenAI Powered Data Analytics Job Simulation certificate"
@@ -1769,6 +1884,20 @@
   <script src="resume-data.js" defer></script>
   <script src="script.js" defer></script>
 
-</body>
+
+  <!-- Accessible certificate preview modal -->
+  <div class="certificate-modal" id="certificateModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal aria-label="Close certificate preview"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle" tabindex="-1">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close certificate preview">×</button>
+      <img id="certificateModalImage" alt="Certificate preview">
+      <div class="modal-caption">
+        <span id="certificateModalTitle">CERTIFICATE PREVIEW</span>
+        <span>ESC TO CLOSE</span>
+      </div>
+    </div>
+  </div>
+
+  </body>
 
 </html>

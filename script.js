@@ -111,27 +111,59 @@
   }, { passive: true });
   frame?.addEventListener('mouseleave', () => frame.style.transform = 'perspective(1100px) rotateY(0deg) rotateX(0deg)');
 
-  // Certificate preview modal.
+  // Accessible certificate preview modal.
   const modal = $('#certificateModal');
   const modalImg = $('#certificateModalImage');
-  const openCertificate = (path) => {
-    if (!modal || !modalImg) return;
+  let previouslyFocused = null;
+
+  const openCertificate = (path, trigger = document.activeElement) => {
+    if (!modal || !modalImg || !path) return;
+    previouslyFocused = trigger instanceof HTMLElement ? trigger : document.activeElement;
     modalImg.src = path;
+    modalImg.alt = 'Certificate preview';
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('menu-open');
+    $('.modal-close', modal)?.focus();
   };
+
   const closeCertificate = () => {
-    modal?.classList.remove('open'); modal?.setAttribute('aria-hidden', 'true');
+    if (!modal || !modal.classList.contains('open')) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('menu-open');
+    const focusTarget = previouslyFocused;
+    previouslyFocused = null;
+    if (focusTarget && typeof focusTarget.focus === 'function' && document.contains(focusTarget)) {
+      focusTarget.focus();
+    }
   };
+
   $$('.certificate-trigger').forEach(el => {
-    el.addEventListener('click', () => openCertificate(el.dataset.cert));
-    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCertificate(el.dataset.cert); } });
+    el.addEventListener('click', () => openCertificate(el.dataset.cert, el));
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openCertificate(el.dataset.cert, el);
+      }
+    });
   });
-  $$('.certificate-button').forEach(btn => btn.addEventListener('click', e => { e.stopPropagation(); openCertificate(btn.dataset.cert); }));
+  $$('.certificate-button').forEach(btn => btn.addEventListener('click', e => {
+    e.stopPropagation();
+    openCertificate(btn.dataset.cert, btn);
+  }));
   $$('[data-close-modal]').forEach(el => el.addEventListener('click', closeCertificate));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCertificate(); });
+  document.addEventListener('keydown', e => {
+    if (!modal?.classList.contains('open')) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeCertificate();
+    } else if (e.key === 'Tab') {
+      // The close control is the dialog's only focusable element; keep tab focus inside it.
+      e.preventDefault();
+      $('.modal-close', modal)?.focus();
+    }
+  });
 
   // Point the Open/Download buttons at a Blob URL built from the embedded
   // PDF data (resume-data.js), so they work purely from within the page
